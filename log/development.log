@@ -1,0 +1,20 @@
+Started GET "/" for ::1 at 2025-07-19 12:59:12 +0200
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='RailsTest'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='RailsTest'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RailsTest'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 9.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/assets/application-38e2b374.css" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/application-ecb5dbec.js" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2025-07-19 12:59:12 +0200
+Started GET "/assets/controllers/application-3affb389.js" for ::1 at 2025-07-19 12:59:12 +0200

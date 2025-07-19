@@ -1,0 +1,224 @@
+<!-- Header -->
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <%= link_to root_path, class: "logo" do %>
+          <h2>YourBrand</h2>
+        <% end %>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main class="main-content">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to Your Amazing Ruby on Rails App</h1>
+        <p class="hero-description">
+          Build modern, scalable web applications with the power of Ruby on Rails. 
+          Fast, secure, and developer-friendly framework for your next big project.
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">Get Started</a>
+          <a href="#services" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-placeholder">
+          <svg width="400" height="300" viewBox="0 0 400 300" fill="none">
+            <rect width="400" height="300" rx="8" fill="#f8fafc"/>
+            <rect x="50" y="50" width="300" height="200" rx="4" fill="#e2e8f0"/>
+            <circle cx="200" cy="150" r="40" fill="#3b82f6"/>
+            <text x="200" y="155" text-anchor="middle" font-size="14" fill="white">Rails</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose Rails?</h2>
+        <p>Ruby on Rails follows the principle of "Convention over Configuration" making development faster and more enjoyable.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Development</h3>
+          <p>Rails emphasizes developer happiness and productivity with sensible defaults and powerful conventions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure by Default</h3>
+          <p>Built-in security features protect against common vulnerabilities like SQL injection and CSRF attacks.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Scalable</h3>
+          <p>From small startups to large enterprises, Rails scales with your business needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>We offer comprehensive web development solutions using Ruby on Rails.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Web Application Development</h3>
+          <p>Custom web applications built with Rails, tailored to your specific business requirements.</p>
+          <ul>
+            <li>MVC Architecture</li>
+            <li>RESTful APIs</li>
+            <li>Database Integration</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>E-commerce Solutions</h3>
+          <p>Robust e-commerce platforms with secure payment processing and inventory management.</p>
+          <ul>
+            <li>Shopping Cart</li>
+            <li>Payment Gateway</li>
+            <li>Order Management</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>API Development</h3>
+          <p>RESTful and GraphQL APIs that power mobile apps and integrate with third-party services.</p>
+          <ul>
+            <li>REST APIs</li>
+            <li>GraphQL</li>
+            <li>Authentication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Ready to start your next Rails project? Let's discuss how we can help you.</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@yourbrand.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>San Francisco, CA</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <%= form_with url: "#", local: true, class: "form" do |form| %>
+            <div class="form-group">
+              <%= form.text_field :name, placeholder: "Your Name", class: "form-input", required: true %>
+            </div>
+            <div class="form-group">
+              <%= form.email_field :email, placeholder: "Your Email", class: "form-input", required: true %>
+            </div>
+            <div class="form-group">
+              <%= form.text_area :message, placeholder: "Your Message", rows: 5, class: "form-input", required: true %>
+            </div>
+            <div class="form-group">
+              <%= form.submit "Send Message", class: "btn btn-primary btn-full" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>YourBrand</h3>
+        <p>Building amazing web applications with Ruby on Rails since 2024.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">API Development</a></li>
+          <li><a href="#">E-commerce</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <ul class="footer-links">
+          <li>hello@yourbrand.com</li>
+          <li>+1 (555) 123-4567</li>
+          <li>San Francisco, CA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <%= Date.current.year %> YourBrand. All rights reserved. Built with Ruby on Rails.</p>
+    </div>
+  </div>
+</footer>
